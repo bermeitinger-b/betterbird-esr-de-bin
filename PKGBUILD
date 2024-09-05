@@ -1,8 +1,8 @@
 # Maintainer: Posi<posi1981@gmail.com>
 pkgname=betterbird-de-bin
 _pkgname=betterbird
-pkgver=115.14.0
-_build=bb31
+pkgver=115.15.0
+_build=bb32
 pkgrel=1
 pkgdesc="GERMAN // Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will."
 arch=('x86_64')
@@ -47,7 +47,7 @@ package() {
             "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/$_pkgname.png
     done
 }
-sha256sums=('484aca083a0106241f3989dca3ca767ed0baec28791e566b78c7779d2f2b6917'
+sha256sums=('74bbd628a514d305ca56629a89bc6766fd41348020b1e3dd691c6aba0c1a64b2'
             'b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b'
             'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09')
 
