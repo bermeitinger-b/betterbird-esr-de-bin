@@ -16,7 +16,13 @@ source=(
     "https://www.betterbird.eu/downloads/128-Preview/${_pkgname}-${pkgver//_/-}-${_build}.en-US.linux-x86_64.tar.bz2"
     "betterbird.desktop"
     "vendor-prefs.js"
+    "de-languagepack.xpi::https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future"
 )
+
+build() {
+    _langpackid="$(grep \"id\" manifest.json | awk -F\" '{print $4}')"
+    export _langpackid
+}
 
 package() {
     install -d "${pkgdir}/opt"
@@ -29,13 +35,11 @@ package() {
     ln -s /opt/$_pkgname/betterbird "$pkgdir"/usr/bin/$_pkgname
     ln -s /usr/share/hunspell "${pkgdir}/opt/${_pkgname}/dictionaries"
 
-    echo     "
+    echo "
 
 	  >>>>>    Bitte nicht vergessen eine Stimme für dieses Paket abzugeben. DANKE
 	  >>>>>    https://aur.archlinux.org/packages/betterbird-de-bin
 
-	  >>>>> THIS IS THE ESR VERSION: THERE IS NO GERMAN VERSION.
-	  >>>>> DOWNLOAD THE LANGUAGE XPI HERE: https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future
 	  "
 
     #icons
@@ -44,8 +48,11 @@ package() {
         ln -s /opt/$_pkgname/chrome/icons/default/default$i.png \
             "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/$_pkgname.png
     done
+
+    # german language pack
+    install -D -m644 "de-languagepack.xpi" "${pkgdir}/opt/betterbird/extensions/${_langpackid}.xpi"
 }
 sha256sums=('5d46cc5fcd1c3b5ed73d304c46c708350c8d3097e5fa73c04258d8ef62d4a889'
             'b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b'
-            'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09')
-
+            'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09'
+            '591d2ed67944e98a781f3fe35357790468f6bb74a570bc32b631c2b8ec2d674b')
