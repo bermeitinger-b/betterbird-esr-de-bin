@@ -1,19 +1,19 @@
 # Maintainer: Posi<posi1981@gmail.com>
-pkgname=betterbird-de-bin
+pkgname=betterbird-esr-bin
 _pkgname=betterbird
-pkgver=115.16.0
-_build=bb33
+pkgver=128.3.1esr
+_build=bb12
 pkgrel=1
 pkgdesc="GERMAN // Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will."
 arch=('x86_64')
 url="https://www.betterbird.eu/index.html"
 license=('MPL2')
 depends=('dbus-glib' 'hunspell')
-optdepends=('hunspell-de')
+optdepends=('hunspell-en_US' 'hunspell-de')
 provides=("betterbird=${pkgver}")
 conflicts=('betterbird')
 source=(
-    "https://www.betterbird.eu/downloads/LinuxArchive/${_pkgname}-${pkgver//_/-}-${_build}.de.linux-x86_64.tar.bz2"
+    "https://www.betterbird.eu/downloads/128-Preview/${_pkgname}-${pkgver//_/-}-${_build}.en-US.linux-x86_64.tar.bz2"
     "betterbird.desktop"
     "vendor-prefs.js"
 )
@@ -34,6 +34,8 @@ package() {
 	  >>>>>    Bitte nicht vergessen eine Stimme für dieses Paket abzugeben. DANKE
 	  >>>>>    https://aur.archlinux.org/packages/betterbird-de-bin
 
+	  >>>>> THIS IS THE ESR VERSION: THERE IS NO GERMAN VERSION.
+	  >>>>> DOWNLOAD THE LANGUAGE XPI HERE: https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future
 	  "
 
     #icons
@@ -43,7 +45,7 @@ package() {
             "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/$_pkgname.png
     done
 }
-sha256sums=('cedad84056b71c453a7e550050fe762aaed218bf8c19cc10d0ae44151692c41d'
+sha256sums=('5d46cc5fcd1c3b5ed73d304c46c708350c8d3097e5fa73c04258d8ef62d4a889'
             'b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b'
             'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09')
 
