@@ -16,7 +16,7 @@ source=(
     "https://www.betterbird.eu/downloads/128-Preview/${_pkgname}-${pkgver//_/-}-${_build}.en-US.linux-x86_64.tar.bz2"
     "betterbird.desktop"
     "vendor-prefs.js"
-    "de-languagepack.xpi::https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future"
+    "de-${pkgver}${_build}-languagepack.xpi::https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future"
 )
 
 build() {
@@ -50,7 +50,7 @@ package() {
     done
 
     # german language pack
-    install -D -m644 "de-languagepack.xpi" "${pkgdir}/opt/betterbird/extensions/${_langpackid}.xpi"
+    install -D -m644 "de-${pkgver}${_build}-languagepack.xpi" "${pkgdir}/opt/betterbird/extensions/${_langpackid}.xpi"
 }
 sha256sums=('71f6a6efa28d55db39f4563fa457edbf872ef736ac8c7cab2886c114ccb5b5fb'
             'b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b'
