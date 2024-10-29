@@ -1,8 +1,8 @@
 # Maintainer: Posi<posi1981@gmail.com>
 pkgname=betterbird-esr-de-bin
 _pkgname=betterbird
-pkgver=128.3.2esr
-_build=bb13
+pkgver=128.4.0esr
+_build=bb15
 pkgrel=1
 pkgdesc="GERMAN // Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will."
 arch=('x86_64')
