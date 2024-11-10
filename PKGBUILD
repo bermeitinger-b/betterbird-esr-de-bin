@@ -1,8 +1,8 @@
 # Maintainer: Posi<posi1981@gmail.com>
 pkgname=betterbird-esr-de-bin
 _pkgname=betterbird
-pkgver=128.4.2esr
-_build=bb16
+pkgver=128.4.3esr
+_build=bb17
 pkgrel=1
 pkgdesc="GERMAN // Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will."
 arch=('x86_64')
@@ -52,7 +52,7 @@ package() {
     # german language pack
     install -D -m644 "de-${pkgver}${_build}-languagepack.xpi" "${pkgdir}/opt/betterbird/extensions/${_langpackid}.xpi"
 }
-sha256sums=('45abf189fea5c5f8118f35a9af6e19b8ad49a9e21fde3ed4defbaf7c755a6e01'
+sha256sums=('ab09c8f8aeb02df72fce25184a5864d2e051d56d8188a490aef35e02293285e5'
             'b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b'
             'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09'
-            '2595f72afd32404432ac39b3568391e05319c4665e8080bfb304e55e424082f1')
+            '026173b081fe5d900124a75dfd0224b226cf3100e1f65234f274ae20a552e68d')
