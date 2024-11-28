@@ -13,16 +13,10 @@ optdepends=('hunspell-en_US' 'hunspell-de')
 provides=("betterbird=${pkgver}")
 conflicts=('betterbird')
 source=(
-    "https://www.betterbird.eu/downloads/128-Preview/${_pkgname}-${pkgver//_/-}-${_build}.en-US.linux-x86_64.tar.bz2"
+    "https://www.betterbird.eu/downloads/LinuxArchive/${_pkgname}-${pkgver//_/-}-${_build}.de.linux-x86_64.tar.bz2"
     "betterbird.desktop"
     "vendor-prefs.js"
-    "de-${pkgver}${_build}-languagepack.xpi::https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future"
 )
-
-build() {
-    _langpackid="$(grep \"id\" manifest.json | awk -F\" '{print $4}')"
-    export _langpackid
-}
 
 package() {
     install -d "${pkgdir}/opt"
@@ -49,10 +43,8 @@ package() {
             "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/$_pkgname.png
     done
 
-    # german language pack
-    install -D -m644 "de-${pkgver}${_build}-languagepack.xpi" "${pkgdir}/opt/betterbird/extensions/${_langpackid}.xpi"
 }
-sha256sums=('e9e59ee5bc17ac55a6779c7157b483defa27163f5fd9355ed9bade544b6ae7af'
+sha256sums=('bce4a37924ff3d1c343abcc20cb42e3cec6b2884b28b9bddc27dd26969a2ee9f'
             'b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b'
-            'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09'
-            '026173b081fe5d900124a75dfd0224b226cf3100e1f65234f274ae20a552e68d')
+            'b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09')
+            

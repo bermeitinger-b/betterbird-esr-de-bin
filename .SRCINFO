@@ -11,13 +11,11 @@ pkgbase = betterbird-esr-de-bin
 	optdepends = hunspell-de
 	provides = betterbird=128.5.0esr
 	conflicts = betterbird
-	source = https://www.betterbird.eu/downloads/128-Preview/betterbird-128.5.0esr-bb18.en-US.linux-x86_64.tar.bz2
+	source = https://www.betterbird.eu/downloads/LinuxArchive/betterbird-128.5.0esr-bb18.de.linux-x86_64.tar.bz2
 	source = betterbird.desktop
 	source = vendor-prefs.js
-	source = de-128.5.0esrbb18-languagepack.xpi::https://www.betterbird.eu/downloads/get.php?os=all&lang=de&version=future
-	sha256sums = e9e59ee5bc17ac55a6779c7157b483defa27163f5fd9355ed9bade544b6ae7af
+	sha256sums = bce4a37924ff3d1c343abcc20cb42e3cec6b2884b28b9bddc27dd26969a2ee9f
 	sha256sums = b664d5453512ba1c8a58699d106fb1248991dbae0ee44464484be0886278945b
 	sha256sums = b11745416d2b2f8bac1ccd3dcb99411c7239b067adf9eb973903c448f8747d09
-	sha256sums = 026173b081fe5d900124a75dfd0224b226cf3100e1f65234f274ae20a552e68d
 
 pkgname = betterbird-esr-de-bin
