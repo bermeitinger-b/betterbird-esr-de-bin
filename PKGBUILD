@@ -1,5 +1,6 @@
+# CURRENTLY UNMAINTAINED (UPSTREAM IS UP2DATE)
 # Maintainer: Posi<posi1981@gmail.com>
-pkgname=betterbird-esr-de-bin
+pkgname=betterbird-de-bin
 _pkgname=betterbird
 pkgver=128.5.0esr
 _build=bb18
